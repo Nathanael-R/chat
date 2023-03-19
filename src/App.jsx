@@ -10,6 +10,9 @@ function App() {
 
   useEffect(() => {
     const socket = io("http://localhost:3000");
+    console.log(socket.on("firstEvent", (msg) => {
+      console.log(msg)
+    }))
   }, [])
   return (
     <div className="container">
