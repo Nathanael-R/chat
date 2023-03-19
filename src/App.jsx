@@ -9,7 +9,7 @@ function App() {
   const [user, setUser] = useState("");
 
   useEffect(() => {
-    const socket = io("http://localhost:3000");
+    const socket = io.connect("http://192.168.43.87:5000");
     console.log(socket.on("firstEvent", (msg) => {
       console.log(msg)
     }))
